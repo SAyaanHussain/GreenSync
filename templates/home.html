@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | GreenSync</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #fcbad3 0%, #e0f7ff 50%, #90caf9 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Lora', sans-serif;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 90px;
+      text-align: center;
+    }
+
+    .desc {
+      text-align: center;
+      font-size: 21px;
+    }
+
+    .highlight {
+      background-color: #0BDA51;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .intro {
+      position: relative;
+      text-align: center;
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    .intro h1,
+    .intro .desc {
+      position: relative;
+      z-index: 1;
+    }
+
+    .squi,
+    .block,
+    .rect {
+      position: absolute;
+      z-index: 0;
+    }
+
+    .squi {
+      width: 140px;
+      transform: rotate(45deg);
+      top: 0;
+      left: 10%;
+    }
+
+    .block {
+      width: 150px;
+      height: 150px;
+      transform: rotate(36deg);
+      bottom: 0;
+      right: 15%;
+    }
+
+    .rect {
+      width: 150px;
+      transform: rotate(77deg);
+      top: 100px;
+      left: 60%;
+    }
+
+    .main{
+      width:300px;
+      height:340px;
+      border-radius: 20px;
+    }
+    .start{
+      width:280px;
+      height: 50px;
+      padding:10px;
+      background-color:#F0E68C;
+      border: none;
+      color:black;
+      display: block;
+      margin: auto;
+      transition: all 0.3s ease-out;
+    }
+    .start:hover{
+      border-radius: 40px;
+    }
+
+    .hr1{
+      background-color: black;
+      color:black;
+      height:1.4px;
+      width:50%;
+      display: block;
+      margin: auto;
+    }
+    .greeting{
+      margin-left:20px;
+      font-family: 'Montserrat',sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">GreenSync</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="/home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/plant-advisor">Plant Advisor</a></li>
+          <li class="nav-item"><a class="nav-link" href="/disease-detection">Plant Doctor</a></li>
+          <li class="nav-item"><a class="nav-link" href="/control-panel">Robot Hub</a></li>
+          <li class="nav-item"><a class="nav-link" href="/gardening-tips">GreenBrain</a></li>
+          <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+          <li class="nav-item"><a class="nav-link" href="/user-account"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+            <path d="M18.5 20V17.9704C18.5 16.7281 17.9407 15.5099 16.8103 14.9946C15.4315 14.3661 13.7779 14 12 14C10.2221 14 8.5685 14.3661 7.18968 14.9946C6.05927 15.5099 5.5 16.7281 5.5 17.9704V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="12" cy="7.5" r="3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg></a></li>
+        </ul>
+        <div class="greeting">
+          <h3>Greetings, {{user.username}} 👋</h3>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+
+  <div class="intro">
+    <img class="rect" src="{{ url_for('static', filename='image/rect.png') }}" alt="rect shape">
+    <img class="squi" src="{{ url_for('static', filename='image/squi.png') }}" alt="squiggly line"><br>
+    <img class="block" src="{{ url_for('static', filename='image/block.png') }}" alt="block shape">
+    <h1>GreenSync</h1>
+    <p class="desc">Smart plant care assistant with <span class="highlight">AI, robot control</span>, and insights.</p>
+  
+    <img class="main" src="{{ url_for('static', filename='image/main2.png') }}" alt="main"><br><br>
+    <br><br><br>
+    <button class="start">Get Started <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+      <path d="M20 12H4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15 17C15 17 20 13.318 20 12C20 10.682 15 7 15 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg></button>
+  </div>
+  <h1 class="hr1"></h1>
+
+  <br>
+  <br>
+
+  <div class="add">
+    <h1>Add a plant 🌱</h1>
+    
+  </div>
+  
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
