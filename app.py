@@ -5,9 +5,9 @@ import openai
 from functools import wraps
 
 app = Flask(__name__)
-app.secret_key = 'greensyncaiisthebestaiprobablybetterthancaresyncbutehwhocaresbothareamazingandthiskeycantgetanystrongerhereletmeaddafewspecialcharslike@&99273#^^Nownohackercanbypasseveniftheywantedtohahaiwill-skITFFbbeW' 
+app.secret_key = 'hehe' 
 client = MongoClient(
-    "mongodb+srv://greensync:LljysdQhhLFxyG5t@cluster0.y31xe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "hehewon'ttellya",
     tls=True,
     tlsCAFile=certifi.where()
 )
